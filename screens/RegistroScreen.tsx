@@ -22,7 +22,7 @@ export default function RegistroScreen({ navigation }: any) {
             confirmarPassword.trim() !== ""
         ) {
             if (isNaN(Number(telefono))) {
-                Alert.alert("Error", "El teléfono debe ser numérico");
+                Alert.alert("Error", "El teléfono deben ser solo numeros");
                 return;
             }
             if (password !== confirmarPassword) {
@@ -30,14 +30,14 @@ export default function RegistroScreen({ navigation }: any) {
                 return;
             }
             if (!aceptaTerminos) {
-                Alert.alert("Error", "Debe aceptar los términos y condiciones");
+                Alert.alert("Advertencia", "Debe aceptar los términos y condiciones");
                 return;
             }
 
             Alert.alert(
-                "Registro exitoso",
-                `Bienvenido/a ${nombre} ${apellido}\nEmail: ${email}\nSuscripción: ${suscripcion ? "Sí" : "No"}`
+                "Registro exitoso","Bienvenido/a " + nombre + " " + apellido + "\nEmail: " + email + "\nSuscripción: " + (suscripcion ? "Sí" : "No")
             );
+
         } else {
             Alert.alert("ERROR", "No se permiten campos en blanco");
         }
@@ -47,68 +47,32 @@ export default function RegistroScreen({ navigation }: any) {
         <ScrollView contentContainerStyle={styles.container}>
             <Text style={styles.titulo}>Registro</Text>
 
-            <TextInput
-
-                style={styles.input}
-
-                placeholder="Nombre"
-
-                onChangeText={setNombre} />
+            <TextInput style={styles.input} placeholder="Nombre" onChangeText={setNombre} />
 
 
-            <TextInput
+            <TextInput style={styles.input} placeholder="Apellido" 
+            onChangeText={setApellido} />
 
-                style={styles.input}
+            <TextInput style={styles.input} placeholder="Email" 
+            onChangeText={setEmail} keyboardType="email-address" />
 
-                placeholder="Apellido"
+            <TextInput style={styles.input} placeholder="Teléfono" 
+            onChangeText={setTelefono} keyboardType="numeric" />
 
-                onChangeText={setApellido} />
+            <TextInput style={styles.input} placeholder="Contraseña" 
+            onChangeText={setPassword} secureTextEntry />
 
-            <TextInput
-
-                style={styles.input}
-
-                placeholder="Email"
-
-                onChangeText={setEmail}
-                keyboardType="email-address" />
-
-            <TextInput
-
-                style={styles.input}
-
-                placeholder="Teléfono"
-
-                onChangeText={setTelefono}
-                keyboardType="numeric" />
-
-            <TextInput
-
-                style={styles.input}
-
-                placeholder="Contraseña"
-
-                onChangeText={setPassword}
-                secureTextEntry />
-
-            <TextInput
-
-                style={styles.input}
-
-                placeholder="Confirmar Contraseña"
-
-                onChangeText={setConfirmarPassword} secureTextEntry />
+            <TextInput style={styles.input} placeholder="Confirmar Contraseña" 
+            onChangeText={setConfirmarPassword} secureTextEntry />
 
             <View style={styles.switchContainer}>
 
-                <Text>Acepta Términos</Text>
-
-                <Switch value={aceptaTerminos}
-                    onValueChange={setAceptaTerminos} />
+                <Text>Acepta los Terminos y condiciones</Text>
+                <Switch value={aceptaTerminos} onValueChange={setAceptaTerminos} />
             </View>
 
             <View style={styles.switchContainer}>
-                <Text>Suscribirse al newsletter</Text>
+                <Text>Suscribirse </Text>
                 <Switch value={suscripcion} onValueChange={setSuscripcion} />
             </View>
 
