@@ -17,12 +17,11 @@ function MyTab(){
             tabBarIcon: ({ color, size }) => 
             (<MaterialCommunityIcons name="home" size={24} color="black" />) }}
             />
+            
             <Tab.Screen name="Login" component={LoginScreen}
             options={{tabBarIcon: ({ color, size }) =>(
                 <AntDesign name="login" size={24} color="black" />
             )}}/>
-
-
 
 
 
@@ -32,6 +31,7 @@ function MyTab(){
                 <Entypo name="calculator" size={24} color="black" />
             )}}/>
         </Tab.Navigator>
+        
         )
     
 }

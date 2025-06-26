@@ -14,7 +14,7 @@ return (
     <TextInput placeholder='Ingresar constraseña'
     style= {[styles.Input, styles.txt]}/>
 
-    <TouchableOpacity  style={styles.btn} onPress={()=> navigation.navigate("Tab")}>
+    <TouchableOpacity  style={styles.btn} onPress={()=> navigation.navigate("Calculadora")}>
         <View style={styles.fila}>
             <Text style={styles.txt}>Ir a Calculadora</Text> 
         <MaterialCommunityIcons name="login" size={35} color="#ffffff" />
@@ -27,7 +27,7 @@ return (
 
     <TouchableOpacity
         style={[styles.btn, { marginTop: 20 }]}
-        onPress={() => navigation.navigate("Registro")}
+        onPress={() => navigation.navigate("Tab")}
       >
         <Text style={styles.txt}>Ir a Registro</Text>
       </TouchableOpacity>

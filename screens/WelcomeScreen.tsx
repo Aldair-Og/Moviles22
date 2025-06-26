@@ -6,6 +6,7 @@ export default function WelcomeScreen({navigation}: any) {
     <View>
       <Text>WelcomeScreen</Text>
       <Button title='Ir a login' onPress={()=> navigation.navigate("Login")}/>
+     
 
     </View>
   )
