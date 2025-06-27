@@ -29,9 +29,10 @@ return (
         style={[styles.btn, { marginTop: 20 }]}
         onPress={() => navigation.navigate("Tab")}
       >
-        <Text style={styles.txt}>Ir a Registro</Text>
+        <Text style={styles.txt}>Ir a Formularios</Text>
       </TouchableOpacity>
 
+     
     
 
     </View>
