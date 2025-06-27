@@ -36,7 +36,7 @@ export default function DireccionScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={{ fontSize: 40 }}>Dirección</Text>
+      <Text style={{ fontSize: 40 }}>Direccion</Text>
 
       <TextInput
         placeholder='Calle'

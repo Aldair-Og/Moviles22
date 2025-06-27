@@ -10,6 +10,7 @@ import DireccionScreen from "../screens/DireccionScreen";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import ListaLocal1Screen from "../screens/listas/ListaLocal1Screen";
 import ListaLocal2Screen from "../screens/listas/ListaLocal2Screen";
+import EncuestaScreen from "../screens/EncuestaScreen";
 
 const Stack = createStackNavigator()
 
@@ -33,6 +34,7 @@ function MyTabs(){
       <Tab.Screen name="Formulario" component={FormularioScreen}/>
       <Tab.Screen name="Registro" component={RegistroScreen}/>
       <Tab.Screen name="Direccion" component={DireccionScreen}/>
+      <Tab.Screen name="Encuesta" component={EncuestaScreen}/>
       <Tab.Screen name="Top" component={MyTops}/>
 
     </Tab.Navigator>

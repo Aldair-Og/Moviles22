@@ -11,7 +11,8 @@ export default function ListaLocal2Screen() {
     <View>
       <Text>ListaLocal2Screen</Text>
       <FlatList 
-      data={datos} renderItem={ ( {item} )=>
+      data={datos} 
+      renderItem={ ( {item} )=>
       <Tarjeta informacion = {item}/>
       
       

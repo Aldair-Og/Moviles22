@@ -1,7 +1,7 @@
 import { Alert, Button, StyleSheet, Text, View } from 'react-native'
 import React, {useState} from 'react'
 import { Switch, TextInput } from 'react-native-gesture-handler';
-import { Divider } from 'react-native-paper';
+
 
 export default function FormularioScreen() {
 

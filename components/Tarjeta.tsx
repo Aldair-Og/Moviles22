@@ -9,15 +9,15 @@ export default function Tarjeta(props: any) {
 
   return (
     <TouchableOpacity style={styles.btn} onPress={() => mostrarDatos(props.informacion)}>
-      <View style={styles.cardRow}>
+      <View style={styles.card}>
         <Image source={{ uri: props.informacion.images.main }} style={styles.img} />
 
-        <View style={styles.rightBlock}>
+        <View style={styles.info}>
           <Text style={styles.txt}>
             {props.informacion.name.first} {props.informacion.name.last}
           </Text>
-          <Text style={styles.subTxt}>Ocupación: {props.informacion.occupation}</Text>
-          <Text style={styles.subTxt}>Edad: {props.informacion.age}</Text>
+          <Text style={styles.txt2}>Ocupación: {props.informacion.occupation}</Text>
+          <Text style={styles.txt2}>Edad: {props.informacion.age}</Text>
         </View>
       </View>
     </TouchableOpacity>
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 15,
   },
-  cardRow: {
+  card: {
     flexDirection: 'row',
     alignItems: 'flex-start',
   },
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     marginRight: 15,
   },
-  rightBlock: {
+  info: {
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'flex-start',
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginBottom: 5,
   },
-  subTxt: {
+  txt2: {
     fontSize: 14,
     marginBottom: 2,
   },
