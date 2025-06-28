@@ -11,6 +11,7 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import ListaLocal1Screen from "../screens/listas/ListaLocal1Screen";
 import ListaLocal2Screen from "../screens/listas/ListaLocal2Screen";
 import EncuestaScreen from "../screens/EncuestaScreen";
+import ListaExternaScreen from "../screens/listas/ListaExternaScreen";
 
 const Stack = createStackNavigator()
 
@@ -50,6 +51,7 @@ function MyTops(){
         <Top.Navigator initialRouteName="ListaLocal1">
         <Top.Screen name="ListaLocal1" component={ListaLocal1Screen}/>
         <Top.Screen name="ListaLocal2" component={ListaLocal2Screen}/>
+        <Top.Screen name="ListaExterna" component={ListaExternaScreen}/>
         </Top.Navigator>
     )
 }
