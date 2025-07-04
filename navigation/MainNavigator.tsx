@@ -2,16 +2,13 @@ import { createStackNavigator} from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import WelcomeScreen from "../screens/WelcomeScreen";
-import LoginScreen from "../screens/LoginScreen";
-import CalculadoraScreen from "../screens/CalculadoraScreen";
-import FormularioScreen from "../screens/FormularioScreen";
-import RegistroScreen from "../screens/RegistroScreen";
-import DireccionScreen from "../screens/DireccionScreen";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import ListaLocal1Screen from "../screens/listas/ListaLocal1Screen";
-import ListaLocal2Screen from "../screens/listas/ListaLocal2Screen";
-import EncuestaScreen from "../screens/EncuestaScreen";
-import ListaExternaScreen from "../screens/listas/ListaExternaScreen";
+import ListaExternaScreen from "../screens/listas/Screen4";
+import Screen1 from "../screens/Screen1";
+import Screen3 from "../screens/Screen3";
+import Screen2 from "../screens/Screen2";
+
+
 
 const Stack = createStackNavigator()
 
@@ -19,9 +16,9 @@ function MyStack(){
   return(
     <Stack.Navigator >
       <Stack.Screen name="Welcome" component={WelcomeScreen}/>
-      <Stack.Screen name="Login" component={LoginScreen}/>
+      <Stack.Screen name="Screen1" component={Screen1}/>
       <Stack.Screen name="Tab" component={MyTabs}/>
-      <Stack.Screen name="Calculadora" component={CalculadoraScreen}/>
+
     </Stack.Navigator>
   )
 }
@@ -32,10 +29,7 @@ const Tab = createBottomTabNavigator()
 function MyTabs(){
   return(
     <Tab.Navigator screenOptions={{headerShown: false}}>
-      <Tab.Screen name="Formulario" component={FormularioScreen}/>
-      <Tab.Screen name="Registro" component={RegistroScreen}/>
-      <Tab.Screen name="Direccion" component={DireccionScreen}/>
-      <Tab.Screen name="Encuesta" component={EncuestaScreen}/>
+      <Tab.Screen name="Screen2" component={Screen2}/>
       <Tab.Screen name="Top" component={MyTops}/>
 
     </Tab.Navigator>
@@ -48,10 +42,9 @@ function MyTabs(){
 const Top = createMaterialTopTabNavigator()
 function MyTops(){
     return(
-        <Top.Navigator initialRouteName="ListaLocal1">
-        <Top.Screen name="ListaLocal1" component={ListaLocal1Screen}/>
-        <Top.Screen name="ListaLocal2" component={ListaLocal2Screen}/>
-        <Top.Screen name="ListaExterna" component={ListaExternaScreen}/>
+        <Top.Navigator>
+        <Top.Screen name="Screen3" component={Screen3}/>
+        <Top.Screen name="Screen4" component={ListaExternaScreen}/>
         </Top.Navigator>
     )
 }
